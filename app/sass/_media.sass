@@ -1,0 +1,52 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+	.menu-btn
+		display: block
+		position: absolute
+		top: 10px
+		right: 10px
+	.logo
+		float: none
+		width: 60px
+	.navigation
+		font-size: 30px
+		text-align: center
+		transition: all .5s ease
+		float: none
+		height: 0
+		overflow: hidden
+		.nav_list
+			display: block
+			.list_item
+				margin: 0
+		&.active
+			height: auto
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
