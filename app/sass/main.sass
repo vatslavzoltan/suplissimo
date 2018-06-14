@@ -38,12 +38,16 @@ body
 		background-color: $accent
 		position: relative
 		background-size: cover
+		display: flex
+		flex-direction: column
+		justify-content: center
 		.top-line
 			padding: 10px 0
 			background-color: $white
 			position: fixed
 			width: 100%
 			z-index: 2
+			top: 0
 .navigation
 	float: right
 	font-family: $nav-font
@@ -137,5 +141,15 @@ b, strong
 	&::after
 		opacity: 0
 
+.description_header
+	font-family: $nav_font
+	font-size: 50px
+
+.description
+	background-color: $white
+	padding: 55px 0
+
+.description_text
+	font-weight: 600
 
 @import "media" // Always at the end
