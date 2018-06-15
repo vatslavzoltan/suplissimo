@@ -32,7 +32,7 @@
 
 	<div id="my-page">
 		<div id="my-header">
-			<section class="site-header" id="home" style="background-image: url('img/header_bg.jpg');">
+			<section class="site-header" id="home">
 				<div class="top-line waypoint-container">
 					<div class="container clearfix">
 						<a href="#" class="logo">
@@ -48,15 +48,15 @@
 								</ul>
 							</nav>
 	
-							<a href="#" class="menu-btn">
+							<button  class="menu-btn">
 								<span></span>
-							</a> 
+							</button> 
 						</div>
 					</div>
 				</div>
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-10">
+						<div class="col-md-10 col-sm-12">
 							<img src="img/logo.png" alt="Suplissimo" class="img-responsive img-width">
 						</div>
 					</div>
@@ -73,22 +73,60 @@
 					<div class="container">
 							<h2 class="description_header">Platform Statistics</h2>
 						<div class="row">
-							<div class="col-md-3 statistic_item">
+							<div class="col-md-3 col-sm-6 col-xs-6 statistic_item">
 								<div class="count">7b</div>
 								<div class="count_name">Impressions/ <br> Month</div>
 							</div>
-							<div class="col-md-3 statistic_item">
+							<div class="col-md-3 col-sm-6 col-xs-6 statistic_item">
 								<div class="count">15k</div>
 								<div class="count_name">Websites</div>
 							</div>
-							<div class="col-md-3 statistic_item">
+							<div class="col-md-3 col-sm-6 col-xs-6 statistic_item">
 								<div class="count">11k</div>
 								<div class="count_name">Сampaigns</div>
 							</div>
-							<div class="col-md-3 statistic_item">
+							<div class="col-md-3 col-sm-6 col-xs-6 statistic_item">
 								<div class="count">23</div>
 								<div class="count_name">Countries</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contact">
+					<h2 class="description_header text-center">Contact us</h2>
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-6 col-md-8">
+								<form class="callback clearfix">
+										<div class="success">
+												<span class="close_succes" onclick="event.preventDefault(); $('.success').removeClass('active').hide();$('.reset').val('');$('.error-box').hide();" ></span>
+												<span class="success_text text-center">Your email sent, <br> we reply you shortly!</span> 
+										</div>
+										<!-- Hidden Required Fields -->
+										<input type="hidden" name="project_name" value="Sublissimo">
+										<input type="hidden" name="admin_email" value="vatslav.zoltan@gmail.com"><!-- Admin email -->
+										<input type="hidden" name="form_subject" value="Sublissimo application">
+										<input type="hidden" name="Sublissimo page" value="Sublissimo page">
+										<!-- END Hidden Required Fields -->
+										<div class="input_wrapper clearfix">
+												<div class="input_box">
+														<input class="reset" type="text" name="Name" id="user_name" placeholder="Your name">
+														<!-- <div class="error-box" style="color: #ff0000; font-size: 12px;"></div> -->
+												</div>
+												<div class="input_box">
+														<input class="reset" type="email" name="E-mail" id="user_email" placeholder="Email Adress">
+														<!-- <div class="error-box" style="color: #ff0000; font-size: 12px;"></div> -->
+												</div>
+												<div class="input_box">
+														<input class="reset" type="text" name="Company name" id="user_company_name" placeholder="Company Name">
+														<!-- <div class="error-box" style="color: #ff0000; font-size: 12px;"></div> -->
+												</div>
+										</div>
+										<textarea class="reset" name="Message" id="message_text"  cols="30" rows="8" placeholder="Message"></textarea>
+										<!-- <div class="error-box" style="color: #ff0000; font-size: 12px;"></div> -->
+										<button class="sub_button btn" onclick="checkForm()">Send</button>
+								</form>
 						</div>
 					</div>
 				</div>
