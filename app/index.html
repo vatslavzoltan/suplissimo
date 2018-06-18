@@ -104,7 +104,7 @@
 								<form class="callback clearfix">
 										<div class="success">
 												<span class="close_succes" onclick="event.preventDefault(); $('.success').removeClass('active').hide();$('.reset').val('');$('.error-box').hide();" ></span>
-												<span class="success_text text-center">Your email sent, <br> we reply you shortly!</span> 
+												<span class="success_text text-center">Your email have been sent, <br> We'll reply you shortly</span> 
 										</div>
 										<!-- Hidden Required Fields -->
 										<input type="hidden" name="project_name" value="Sublissimo">
@@ -114,15 +114,15 @@
 										<!-- END Hidden Required Fields -->
 										<div class="input_wrapper clearfix">
 												<div class="input_box">
-														<input class="reset" type="text" name="Name" id="user_name" placeholder="Your name">
+														<input class="reset" type="text" name="Name" id="user_name" placeholder="Your name" required>
 														<!-- <div class="error-box" style="color: #ff0000; font-size: 12px;"></div> -->
 												</div>
 												<div class="input_box">
-														<input class="reset" type="email" name="E-mail" id="user_email" placeholder="Email Adress">
+														<input class="reset" type="email" name="E-mail" id="user_email" placeholder="Email Adress" required>
 														<!-- <div class="error-box" style="color: #ff0000; font-size: 12px;"></div> -->
 												</div>
 												<div class="input_box">
-														<input class="reset" type="text" name="Company name" id="user_company_name" placeholder="Company Name">
+														<input class="reset" type="text" name="Company name" id="user_company_name" placeholder="Company Name" required>
 														<!-- <div class="error-box" style="color: #ff0000; font-size: 12px;"></div> -->
 												</div>
 										</div>
@@ -133,7 +133,16 @@
 						</div>
 					</div>
 				</div>
+				<div class="footer">
+						<div class="container">
+								<div class="footer__box">
+										<span class="copyright">&#169; Suplissimo </span>
+										<span class="date"><script>document.write(new Date().getFullYear() )</script></span>
+								</div>
+						</div>
+				</div>
 			</section>
+			
 		</div>
 	</div>
 	

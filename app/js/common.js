@@ -45,7 +45,11 @@ $(function() {
 		$(this).toggleClass('menu-btn_active');
 		$('.navigation').toggleClass('active');
 	});
-
+	$('.list_item').on('click',function(e){
+		e.preventDefault;
+		$('.navigation').removeClass('active');
+		$('.menu-btn').removeClass('menu-btn_active');
+	})
 	//E-mail Ajax Send
 	$(".callback").submit(function() { //Change
 		var th = $(this);
@@ -95,7 +99,7 @@ menuItems.click(function(e) {
 // Bind to scroll
 $(window).scroll(function() {
   // Get container scroll position
-  var fromTop = $(this).scrollTop() + topMenuHeight + 300;
+  var fromTop = $(this).scrollTop() + topMenuHeight + 500;
 
   // Get id of current scroll item
   var cur = scrollItems.map(function() {

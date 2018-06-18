@@ -41,11 +41,6 @@ body
 		display: flex
 		flex-direction: column
 		justify-content: center
-		background-image: url('../img/header_bg.jpg')
-		background-repeat: no-repeat
-		background-position: center top
-		background-attachment: fixed
-		background-size: cover
 		.top-line
 			padding: 10px 0
 			background-color: $white
@@ -53,6 +48,19 @@ body
 			width: 100%
 			z-index: 2
 			top: 0
+		&:before
+			content: ''
+			background-image: url('../img/header_bg.jpg')
+			background-repeat: no-repeat
+			background-position: center top
+			background-attachment: fixed
+			background-size: cover
+			position: fixed
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			z-index: 0
 .navigation
 	float: right
 	font-family: $nav-font
@@ -121,9 +129,10 @@ body
 	z-index: 100
 	background-color: $accent
 	.pulse
-		position: relative
-		left: 48%
-		top: 50vh
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
 		margin:
 			top: -40px
 			right: -40px
@@ -223,11 +232,15 @@ b, strong
 	font-size: 50px
 	margin-bottom: 50px
 
+.description
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75)
+
 .description,.statistic
 	background-color: $white
 	padding: 55px 0
 	margin-top: 215px
 	letter-spacing: 1px
+	z-index: 1
 
 .description_text
 	font-weight: 600
@@ -263,7 +276,7 @@ b, strong
 .contact
 	background-color: $accent
 	position: relative
-	padding: 50px 0 90px
+	padding: 50px 0 0px
 	.success
 		position: absolute
 		display: none
@@ -352,4 +365,14 @@ b, strong
 		background-color: darken(#222222, 5%)
 		&::after
 			opacity: .32
+
+.footer
+	background-color: #000000
+	min-height: 75px
+	margin-top: 50px
+	font-family: $nav_font
+	letter-spacing: 1px
+	color: #fff
+.footer__box
+	padding-top: 25px
 @import "media" // Always at the end
