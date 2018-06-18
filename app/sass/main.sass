@@ -43,7 +43,8 @@ body
 		justify-content: center
 		background-image: url('../img/header_bg.jpg')
 		background-repeat: no-repeat
-		background-position: center
+		background-position: center top
+		background-attachment: fixed
 		background-size: cover
 		.top-line
 			padding: 10px 0
@@ -82,7 +83,77 @@ body
 					text-decoration: none
 				&.active
 					color: $accent
-					text-decoration: underline
+
+		.list_item.active a
+			color: $accent
+
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	display: block
+	z-index: 2
+	width: 50px
+	height: 50px
+	background-image: url('../img/top.svg')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	border-radius: 10em
+	background-color: #fff
+	transition: all .3s ease
+	cursor: pointer
+	&.active
+		right: 25px
+		transition: all .3s ease
+	&:hover
+		transform: scale(1.1)
+
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha (opacity=$opacity)
+.preloader
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	z-index: 100
+	background-color: $accent
+	.pulse
+		position: relative
+		left: 48%
+		top: 50vh
+		margin:
+			top: -40px
+			right: -40px
+		&::before, &::after
+			content: ''
+			border: 5px solid #fff
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .8s ease-in infinite
+		&::after
+			animation: pulse-inner .8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
+
 
 .img-responsive
 	display: block
@@ -155,7 +226,7 @@ b, strong
 .description,.statistic
 	background-color: $white
 	padding: 55px 0
-	margin-top: 180px
+	margin-top: 215px
 	letter-spacing: 1px
 
 .description_text
