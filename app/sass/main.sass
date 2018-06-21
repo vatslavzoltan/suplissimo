@@ -53,7 +53,6 @@ body
 			background-image: url('../img/header_bg.jpg')
 			background-repeat: no-repeat
 			background-position: center top
-			background-attachment: fixed
 			background-size: cover
 			position: fixed
 			left: 0
@@ -128,25 +127,21 @@ body
 	left: 0
 	z-index: 100
 	background-color: $accent
-	.pulse
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	&::before, &::after
+		content: ''
+		border: 5px solid #fff
+		width: 80px
+		height: 80px
+		border-radius: 500px
 		position: absolute
-		left: 50%
-		top: 50%
-		transform: translate(-50%,-50%)
-		margin:
-			top: -40px
-			right: -40px
-		&::before, &::after
-			content: ''
-			border: 5px solid #fff
-			width: 80px
-			height: 80px
-			border-radius: 500px
-			position: absolute
-		&::before
-			animation: pulse-outer .8s ease-in infinite
-		&::after
-			animation: pulse-inner .8s linear infinite
+	&::before
+		animation: pulse-outer .8s ease-in infinite
+	&::after
+		animation: pulse-inner .8s linear infinite
 @keyframes pulse-outer
 	0%
 		@include opacity(100)
