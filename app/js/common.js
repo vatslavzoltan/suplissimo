@@ -15,7 +15,7 @@ $(function () {
 					from: 0
 				});
 			}, 100);
-			show = false
+			show = false;
 		}
 
 	});
@@ -36,25 +36,25 @@ $(function () {
 			$('.top').addClass("active");
 		} else {
 			$('.top').removeClass("active");
-		};
+		}
 	});
 
 	//Preloader
 	$(window).on('load', function () {
 		$('.preloader').delay(1000).fadeOut('slow');
-	})
+	});
 
 	//Mobile menu
 	$('.menu-btn').on('click', function (e) {
-		e.preventDefault;
+		e.preventDefault();
 		$(this).toggleClass('menu-btn_active');
 		$('.navigation').toggleClass('active');
 	});
 	$('.list_item').on('click', function (e) {
-		e.preventDefault;
+		e.preventDefault();
 		$('.navigation').removeClass('active');
 		$('.menu-btn').removeClass('menu-btn_active');
-	})
+	});
 	//E-mail Ajax Send
 	$(".callback").submit(function () { //Change
 		var th = $(this);
