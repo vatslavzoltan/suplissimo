@@ -19,6 +19,24 @@ $(function () {
 		}
 
 	});
+	$(document).ready(function () {
+		if (!show) return false;
+
+		var w_top = $(window).scrollTop();
+		var e_top = $('#about').offset().top;
+		if (w_top >= e_top) {
+			setTimeout(function () {
+				$(".spinkrement").css('opacity','1');
+				$(".spinkrement").spincrement({
+					thousandSeparator: "",
+					duration: 1000,
+					from: 0
+				});
+			}, 300);
+			show = false;
+		}
+
+	});
 
 	//Scroll
 	$('.list_item a').mPageScroll2id({
